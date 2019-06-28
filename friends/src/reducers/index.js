@@ -1,8 +1,7 @@
+import { combineReducers } from 'redux';
+
 const initialState = {
   friends: []
 };
 
-
-const rootReducer = () {},
-
-export default rootReducer;
+export default combineReducers({});
