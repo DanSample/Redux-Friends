@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 class LoginForm extends Component {
   state = {
@@ -28,7 +29,7 @@ class LoginForm extends Component {
             onChange={this.handleChange}
           />
           <input
-            type="text"
+            type="password"
             name="password"
             value={this.state.credentials.password}
             onChange={this.handleChange}
@@ -40,4 +41,7 @@ class LoginForm extends Component {
   }
 }
 
-export default LoginForm;
+export default connect(
+  null,
+  { login }
+)(LoginForm);
