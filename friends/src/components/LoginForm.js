@@ -19,10 +19,17 @@ class LoginForm extends Component {
     });
   };
 
+  handleSubmit = e => {
+    e.preventDefault();
+    this.props
+      .login(this.state.credentials)
+      .then(() => this.props.history.push('/friends'));
+  };
+
   render() {
     return (
       <div>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <input
             type="text"
             name="username"

@@ -16,6 +16,8 @@ const reducer = (state = initialState, action) => {
         isLoggingIn: true
       };
     }
+    default:
+      return state;
   }
 };
 
